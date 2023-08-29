@@ -1,9 +1,9 @@
 const API_BASE = 'https://apitempo.inmet.gov.br/condicao/capitais/';
 
 export const fetchWeatherData = async () => {
-  const yesterday = new Date();
-  yesterday.setDate(yesterday.getDate() - 1);
-  const API = API_BASE + yesterday.toLocaleDateString('sv-SE');
+  const today = new Date();
+  today.setDate(today.getDate());
+  const API = API_BASE + today.toLocaleDateString('sv-SE');
 
   const response = await fetch(API);
 
